@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-white text-neutral-900 font-sfpro">
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 w-full bg-white shadow-[0px_0px_20px_0px_rgba(203,202,202,0.25)] flex flex-col md:flex-row items-center justify-between px-4 md:px-[120px] h-auto md:h-[84px] max-w-[393px] md:max-w-[1440px] mx-auto">
+    <!-- Mobile Layout -->
+    <div class="flex items-center justify-between w-full md:hidden py-2">
+      <!-- Logo (Left) -->
+      <a href="/index.html">
+        <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
+      </a>
+
+      <button class="flex items-center gap-1.5 w-[40px] h-[34px] border border-neutral-300 rounded-xl px-3">
+        <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+      </button>
+
+      <!-- Search and Cart -->
+      <div class="flex items-center gap-2">
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-full max-w-[200px] h-[34px] border border-neutral-300 rounded-xl px-3">
+          <img src="assets/icon-search.svg" alt="search" class="w-4 h-4" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-6 h-6">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-6 h-6" />
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-4 h-4 flex items-center justify-center rounded-full">
+              1
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon (Right) -->
+      <button class="w-6 h-6">
+        <img src="assets/icon-hamburger.svg" alt="menu" class="w-6 h-6" />
+      </button>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex items-center justify-between w-full">
+      <!-- Logo -->
+      <a href="/index.html">
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-[42px] h-[42px]" />
+          <span class="text-[20px] font-bold text-[#0A0D12]">Shirt</span>
+        </div>
+      </a>
+
+      <!-- Search Container -->
+      <div class="flex items-center gap-3 w-[623px] h-[44px]">
+        <!-- Catalog Button -->
+        <a href="/catalog.html">
+          <button class="flex items-center gap-2 w-[108px] h-[44px] border border-neutral-300 rounded-xl px-4 text-sm text-[#0A0D12]">
+            <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+            Catalog
+          </button>
+        </a>
+
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-[491px] h-[44px] border border-neutral-300 rounded-xl px-4">
+          <img src="assets/icon-search.svg" alt="search" class="w-[15px] h-[15px]" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-6 w-[257px] justify-end">
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-[24px] h-[24px]">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-[24px] h-[24px]"/>
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              6
+            </span>
+          </div>
+        </a>
+
+        <!-- User -->
+        <button class="flex items-center gap-2 border border-neutral-300 rounded-xl px-4 h-[44px]">
+          <img src="assets/icon-user.svg" alt="user" class="w-[24px] h-[24px]" />
+          <span class="text-sm text-[#0A0D12]">John Doe</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== BODY CONTENT ===== -->
+  <main class="w-full flex justify-center">
+    <div class="w-full max-w-[1200px] mx-auto pt-6 pb-12 px-4 lg:px-0">
+
+      <!-- Breadcrumb (Desktop: 1200x24, Mobile: 361x20) -->
+      <nav class="w-[361px] lg:w-[1200px] h-[20px] lg:h-[24px] mb-6 lg:mb-10 text-sm lg:text-base flex items-center gap-2">
+        <a class="font-semibold">Home</a>
+        <span>></span>
+        <a class="font-semibold">Sneakers</a>
+        <span>></span>
+        <span>Sneakers Court Minimalis</span>
+      </nav>
+
+      <!-- PRODUCT SECTION (Desktop: 1200x646, gap 28) -->
+      <section class="lg:flex lg:gap-[28px] w-[361px] lg:w-[1200px]">
+
+        <!-- LEFT: IMAGE BLOCK (Desktop: 402x500 with 402x402 img + 82 thumbnails) -->
+        <div class="w-[361px] lg:w-[402px] lg:h-[500px] flex flex-col gap-4 lg:gap-4">
+          <!-- Main Image (Mobile: 361x361, Desktop: 402x402) -->
+          <div class="w-[361px] h-[361px] lg:w-[402px] lg:h-[402px] rounded-[12px] overflow-hidden bg-[#F5F5F5]">
+            <img src="assets/product-image1.png" alt="Sneakers Court Minimalis"
+                 class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Thumbnails row (Desktop height 82; Mobile total width 361, item 74/82) -->
+          <div class="w-[361px] lg:w-[402px] lg:h-[82px] flex items-center gap-2">
+            <!-- Active thumb container (82) dengan padding 4 & border Neutral-950) -->
+            <div class="hidden lg:flex w-[82px] h-[82px] p-1 rounded-[16px] border border-neutral-950 bg-white items-center justify-center">
+              <img src="assets/product-image1.png" class="w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+            </div>
+            <!-- Mobile: tetap 74x74, tanpa wrapper tebal -->
+            <img src="assets/product-image1.png" class="lg:hidden w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+
+            <img src="assets/product-image1-a.png" class="w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+            <img src="assets/product-image1-b.png" class="w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+            <img src="assets/product-image1-c.png" class="w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+            <img src="assets/product-image1-d.png" class="w-[74px] h-[74px] rounded-[12px] object-cover" alt="">
+          </div>
+        </div>
+
+        <!-- RIGHT: PRODUCT DETAIL (Desktop: 770x646, gap 16) -->
+        <div class="mt-8 lg:mt-0 w-[361px] lg:w-[770px] lg:h-[646px] flex flex-col gap-4">
+
+          <!-- Header (title 361x30/770x34, price 361x34/770x42, rating 361x28/770x32) -->
+          <header class="w-[361px] lg:w-[770px]">
+            <h1 class="w-[361px] lg:w-[770px] h-[30px] lg:h-[34px] text-base lg:text-[20px] leading-[30px] lg:leading-[34px] tracking-[-0.02em]">
+              Sneakers Court Minimalis
+            </h1>
+            <div class="w-[361px] lg:w-[770px] h-[34px] lg:h-[42px]">
+              <p class="font-bold tracking-[-0.02em] text-xl lg:text-[32px] leading-[34px] lg:leading-[42px]">
+                Rp275.000
+              </p>
+            </div>
+            <!-- Rating -->
+            <div class="w-[361px] lg:w-[770px] h-[28px] lg:h-[32px] flex items-center gap-[2px]">
+              <!-- Star 20/24 -->
+              <img src="/assets/vector-star.svg" alt="">
+              <span class="w-[22px] lg:w-[29px] h-[28px] lg:h-[32px] inline-flex items-center justify-center font-semibold tracking-[-0.02em] text-sm lg:text-lg">4.9</span>
+            </div>
+          </header>
+
+          <!-- Line 7 (divider) -->
+          <div class="w-[361px] lg:w-[770px] border-t border-neutral-300"></div>
+
+          <!-- Tabs + Description (Desktop: tabs 306x48; Mobile: tabs 361x48) -->
+          <section class="w-[361px] lg:w-[770px] flex flex-col gap-4">
+            <!-- Tabs -->
+            <div class="w-[361px] lg:w-[306px] h-[48px] flex">
+              <!-- Tab On: Deskripsi -->
+              <button class="w-[180.5px] lg:w-[140px] h-[48px] px-2 flex items-center justify-center gap-2 border-b-[4px] border-neutral-950">
+                <span class="text-sm lg:text-md font-semibold tracking-[-0.02em]">Deskripsi</span>
+              </button>
+              <!-- Tab Off: Spesifikasi -->
+              <button class="w-[180.5px] lg:w-[166px] h-[48px] px-2 flex items-center justify-center gap-2 border-b lg:border-b border-neutral-300">
+                <span class="text-sm lg:text-md tracking-[-0.02em]">Spesifikasi</span>
+              </button>
+            </div>
+
+            <!-- Product description text (Desktop: 770x286; Mobile: 361x406) -->
+            <div class="w-[361px] lg:w-[770px] h-[406px] lg:h-[286px] overflow-hidden">
+              <p class="text-sm lg:text-[16px] leading-[20px] lg:leading-[24px] tracking-[-0.02em]">
+                <span>Sneakers Court Minimalis – Ivory Beige</span><br/>
+                Sepatu sneakers bergaya minimalis dengan kombinasi warna ivory dan beige yang elegan. Terbuat dari material kulit sintetis berkualitas dengan sentuhan suede halus di bagian panel samping dan depan.
+                <br/><br/>
+                <span>• Desain:</span> Low-top dengan siluet klasik yang timeless<br/>
+                <span>• Material:</span> Kulit sintetis premium + suede sintetis<br/>
+                <span>• Sol:</span> Outsole karet anti-slip dengan warna natural gum untuk daya cengkeram yang baik<br/>
+                <span>• Kenyamanan:</span> Insole empuk dengan bantalan ekstra untuk pemakaian sehari-hari<br/>
+                <span>• Warna:</span> Ivory Beige<br/>
+                <span>• Gaya:</span> Cocok untuk casual look, street style, maupun semi-formal
+              </p>
+            </div>
+          </section>
+
+          <!-- Line 8 (divider) -->
+          <div class="w-[361px] lg:w-[770px] border-t border-neutral-300"></div>
+
+          <!-- Quantity + Add to Cart -->
+          <div class="w-[361px] lg:w-[770px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <!-- Quantity (Desktop container 202x44; Mobile 194x44) -->
+            <div class="flex items-center gap-4">
+              <span class="text-sm lg:text-md font-semibold tracking-[-0.02em] w-[58px] lg:w-[66px]">Quantity</span>
+              <div class="w-[120px] h-[44px] rounded-xl border border-neutral-300 bg-white px-3 py-2 flex items-center justify-between">
+                <!-- minus 24 -->
+                <button class="w-[18px] h-[18px] grid place-items-center" aria-label="minus">
+                  <span>–</span>
+                </button>
+                <!-- value 32 -->
+                <span class="w-[32px] h-[32px] grid place-items-center font-bold text-[16px] leading-[32px] tracking-[-0.03em]">2</span>
+                <!-- plus 24 -->
+                <button class="w-[18px] h-[18px] grid place-items-center" aria-label="plus">
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+          </div>
+            <!-- CTA Add to Cart (Desktop: 312x48; Mobile: 361x48) -->
+            <button class="w-[361px] lg:w-[312px] h-[48px] rounded-lg bg-neutral-950 text-white font-semibold tracking-[-0.02em] flex items-center justify-center gap-2">
+              <span> + </span> Add to Cart
+            </button>
+          
+        </div>
+      </section>
+
+      <hr class="border-neutral-300" />
+
+      <!-- RELATED PRODUCT (Desktop: 1200x?, Card 285x403; Mobile: 361 grid 2 kolom, card 172.5x309) -->
+      <section class="w-[361px] lg:w-[1200px] mt-12 lg:mt-16">
+        <h2 class="w-[361px] lg:w-[1200px] h-[44px] text-2xl lg:text-[28px] font-bold tracking-[-0.02em] mb-6">Related Product</h2>
+
+        <!-- Grid: mobile 2 kolom (172.5 + 16 + 172.5 = 361), desktop 4 kolom -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <!-- Card template -->
+          <!-- CARD 1 -->
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden">
+            <img src="assets/product-image5.png" alt="" class="w-full aspect-square object-cover">
+            <div class="p-3 space-y-1">
+              <h3 class="text-sm">Overshirt Utility</h3>
+              <div class="font-bold text-sm">Rp 375.000</div>
+              <div class="flex items-center gap-1">
+                <img src="/assets/icon-star.svg" alt="Star">
+                <span class="text-sm">4.5</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 2 -->
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden">
+            <img src="assets/product-image6.png" alt="" class="w-full aspect-square object-cover">
+            <div class="p-3 space-y-1">
+              <h3 class="text-sm">Sweater Rajut Cable</h3>
+              <div class="font-bold text-sm">Rp 1.300.000</div>
+              <div class="flex items-center gap-1">
+                <img src="/assets/icon-star.svg" alt="Star">
+                <span class="text-sm">4.8</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 3 -->
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden">
+            <img src="assets/product-image7.png" alt="" class="w-full aspect-square object-cover">
+            <div class="p-3 space-y-1">
+              <h3 class="text-sm">Syal Wol Kotak</h3>
+              <div class="font-bold text-sm">Rp 220.000</div>
+              <div class="flex items-center gap-1">
+                <img src="/assets/icon-star.svg" alt="Star">
+                <span class="text-sm">4.9</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 4 -->
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden">
+            <img src="assets/product-image8.png" alt="" class="w-full aspect-square object-cover">
+            <div class="p-3 space-y-1">
+              <h3 class="text-sm">Syal Wol Solid</h3>
+              <div class="font-bold text-sm">Rp 180.000</div>
+              <div class="flex items-center gap-1">
+                <img src="/assets/icon-star.svg" alt="Star">
+                <span class="text-sm">4.7</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full border-t border-neutral-300 bg-white px-6 lg:px-36 py-20">
+    <div class="flex flex-col lg:flex-row justify-between gap-12">
+      
+      <!-- Contain Container -->
+      <div class="max-w-md flex flex-col gap-10">
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10" />
+          <span class="text-2xl font-bold">Shirt</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-neutral-600 text-base leading-relaxed">
+          Explore a realm of style with our fashion e-commerce platform, 
+          where shopping is effortless. Experience a smooth journey with 
+          an extensive selection of trendy apparel, all delivered directly 
+          to your home.
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex flex-col gap-4">
+          <span class="font-semibold">Follow on Social Media</span>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-fb.svg" alt="Facebook" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-ig.svg" alt="Instagram" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-tiktok.svg" alt="TikTok" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">E-Commerce</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">About Us</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Terms & Condition</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Privacy Policy</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Blog</a>
+      </div>
+
+      <!-- Help Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">Help</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Transact</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Payment Method</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Register</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-white text-neutral-900 font-sfpro">
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 w-full bg-white shadow-[0px_0px_20px_0px_rgba(203,202,202,0.25)] flex flex-col md:flex-row items-center justify-between px-4 md:px-[120px] h-auto md:h-[84px] max-w-[393px] md:max-w-[1440px] mx-auto">
+    <!-- Mobile Layout -->
+    <div class="flex items-center justify-between w-full md:hidden py-2">
+      <!-- Logo (kiri) -->
+      <a href="/index.html">
+        <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
+      </a>
+
+      <!-- Catalog Button (Mobile) -->
+      <button class="flex items-center gap-1.5 w-[40px] h-[34px] border border-neutral-300 rounded-xl px-3">
+        <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+      </button>
+
+      <!-- Search and Cart -->
+      <div class="flex items-center gap-2">
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-full max-w-[200px] h-[34px] border border-neutral-300 rounded-xl px-3">
+          <img src="assets/icon-search.svg" alt="search" class="w-4 h-4" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-6 h-6">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-6 h-6" />
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-4 h-4 flex items-center justify-center rounded-full">
+              1
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <button class="w-6 h-6">
+        <img src="assets/icon-hamburger.svg" alt="menu" class="w-6 h-6" />
+      </button>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex items-center justify-between w-full">
+      <!-- Logo -->
+      <a href="/index.html">
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-[42px] h-[42px]" />
+          <span class="text-[20px] font-bold text-[#0A0D12]">
+            Shirt
+          </span>
+        </div>
+      </a>
+
+      <!-- Search Container -->
+      <div class="flex items-center gap-3 w-[623px] h-[44px]">
+        <!-- Catalog Button -->
+        <a href="/catalog.html">
+          <button class="flex items-center gap-2 w-[108px] h-[44px] border border-neutral-300 rounded-xl px-4 text-sm text-[#0A0D12]">
+            <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+            Catalog
+          </button>     
+        </a>
+
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-[491px] h-[44px] border border-neutral-300 rounded-xl px-4">
+          <img src="assets/icon-search.svg" alt="search" class="w-[15px] h-[15px]" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-6 w-[257px] justify-end">
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-[24px] h-[24px]">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-[24px] h-[24px]"/>
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              6
+            </span>
+          </div>
+        </a>
+
+        <!-- User -->
+        <button class="flex items-center gap-2 border border-neutral-300 rounded-xl px-4 h-[44px]">
+          <img src="assets/icon-user.svg" alt="user" class="w-[24px] h-[24px]" />
+          <span class="text-sm text-[#0A0D12]">John Doe</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!--BODY CONTENT-->
+  <!-- Frame 45 -->
+  <section class="w-full max-w-screen-xl mx-auto px-6 lg:px-12 lg:py-12 py-1 flex flex-col gap-10">
+    <!-- Frame 43 -->
+    <div class="w-full mx-auto max-w-[393px] lg:max-w-[1200px] pt-6 pb-4 lg:p-0">           
+    <div class="w-full max-w-[393px] lg:max-w-[1200px] mx-auto">
+
+      <!-- Product Card / Banner -->
+      <div class="w-full bg-[#F3D7A4] rounded-[12px] lg:rounded-[16px] flex flex-row items-center justify-between overflow-hidden h-[183px] lg:h-[340px] lg:px-24">
+
+        <!-- Image (mobile kiri) -->
+        <img src="assets/image43.png" alt="Collection"
+            class="w-[175px] h-[183px] object-cover ml-1 lg:w-[340px] lg:h-[340px] lg:object-cover lg:ml-12" />
+
+        <!-- Frame 44 (mobile kanan) -->
+        <div class="min-w-0 w-[169px] lg:w-auto flex flex-col justify-center gap-3 lg:gap-4 text-[#553E32]">
+          <!-- Title: 16px di mobile -->
+          <h2 class="font-bold text-base leading-8 lg:text-5xl lg:leading-tight break-words">
+            NEW COLLECTION
+          </h2>
+          <!-- Sub: 10px / leading 20px di mobile -->
+          <p class="font-semibold text-[10px] leading-5 lg:text-lg lg:leading-7 break-words">
+            Stylish men's apparel for every occasion
+          </p>
+          <!-- Button: 93×28 di mobile -->
+          <button class="bg-neutral-950 text-white rounded-[6px] w-[93px] h-[28px] lg:rounded-lg lg:w-44 lg:h-12">
+            Get Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frame 41 -->
+    <div class="flex flex-col gap-10 mt-6">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-neutral-950">Featured Product</h2>
+      <!-- Frame 37 (Product Grid) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <a href="/product-detail.html">
+            <img  src="assets/product-image1.png" 
+                  alt="Product" 
+                  class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl"
+            />
+          </a>
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950">Sneakers Court Minimalis</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 275.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.9</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 2-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image2.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Kaos Crewneck Esensial</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 800.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.8</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 3-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image3.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Tas Selempang Klasik</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 1.600.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.7</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 4-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image4.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Kaos Soft Touch</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 650.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.6</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 5-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image5.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Overshirt Utility</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 375.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.5</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 6-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image6.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Sweater Rajut Cable</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 1.300.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.8</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 7-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image7.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Syal Wol Kotak</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 220.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.9</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 8-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image8.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 
+              w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Syal Wol Solid</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 180.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.7</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 9-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image9.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Celana Panjang Tailored</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 2.200.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.8</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 10-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image10.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Sneakers Harian</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 1.900.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.9</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 11-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image11.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Jaket Puffer Quilted</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 450.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.6</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 12-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image12.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Kemeja Oxford</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 950.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.8</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 13-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image13.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Celana Pendek Chino</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 120.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.5</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 14-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image14.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Topi Baseball 6-Panel</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 320.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.7</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 15-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image15.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Kaos Katun Premium</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 1.100.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.9</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card 16-->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden w-[173px] h-[309px] sm:w-[285px] sm:h-[403px]">
+          <img  src="assets/product-image16.png" 
+                alt="Product" 
+                class="w-[173px] h-[173px] sm:w-[285px] sm:h-[285px] object-cover rounded-md sm:rounded-t-xl" />
+          <div class="p-3 sm:p-4 flex flex-col gap-2 w-[173px] h-[136px] sm:w-[285px] sm:h-[118px]">
+            <p class="text-sm sm:text-base text-neutral-950"> Hoodie Pullover Fleece</p>
+            <p class="font-bold text-sm sm:text-base text-neutral-950">Rp 275.000</p>
+            <div class="flex items-center gap-1">
+              <img src="assets/icon-star.svg" alt="Star" class="w-5 h-5 sm:w-6 sm:h-6" />
+              <span class="text-sm sm:text-base text-neutral-950">4.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button bawah -->
+      <div class="flex justify-center">
+        <a href="/catalog.html">
+          <button class="px-8 py-3 border border-neutral-300 rounded-lg font-medium">
+            Load More
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full border-t border-neutral-300 bg-white px-6 lg:px-36 py-20">
+    <div class="flex flex-col lg:flex-row justify-between gap-12">
+      
+      <!-- Contain Container -->
+      <div class="max-w-md flex flex-col gap-10">
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10" />
+          <span class="text-2xl font-bold">Shirt</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-neutral-600 text-base leading-relaxed">
+          Explore a realm of style with our fashion e-commerce platform, 
+          where shopping is effortless. Experience a smooth journey with 
+          an extensive selection of trendy apparel, all delivered directly 
+          to your home.
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex flex-col gap-4">
+          <span class="font-semibold">Follow on Social Media</span>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-fb.svg" alt="Facebook" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-ig.svg" alt="Instagram" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-tiktok.svg" alt="TikTok" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">E-Commerce</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">About Us</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Terms & Condition</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Privacy Policy</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Blog</a>
+      </div>
+
+      <!-- Help Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">Help</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Transact</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Payment Method</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Register</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

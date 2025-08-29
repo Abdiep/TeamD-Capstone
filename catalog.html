@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-white text-neutral-900 font-sfpro">
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 w-full bg-white shadow-[0px_0px_20px_0px_rgba(203,202,202,0.25)] flex flex-col md:flex-row items-center justify-between px-4 md:px-[120px] h-auto md:h-[84px] max-w-[393px] md:max-w-[1440px] mx-auto">
+    <!-- Mobile Layout -->
+    <div class="flex items-center justify-between w-full md:hidden py-2">
+      <!-- Logo (Left) -->
+      <a href="/index.html">
+        <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
+      </a>
+        
+      <button class="flex items-center gap-1.5 w-[40px] h-[34px] border border-neutral-300 rounded-xl px-3">
+        <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+      </button>
+
+      <!-- Search and Cart -->
+      <div class="flex items-center gap-2">
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-full max-w-[200px] h-[34px] border border-neutral-300 rounded-xl px-3">
+          <img src="assets/icon-search.svg" alt="search" class="w-4 h-4" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-6 h-6">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-6 h-6" />
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-4 h-4 flex items-center justify-center rounded-full">
+              1
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon (Right) -->
+      <button class="w-6 h-6">
+        <img src="assets/icon-hamburger.svg" alt="menu" class="w-6 h-6" />
+      </button>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex items-center justify-between w-full">
+      <!-- Logo -->
+      <a href="/index.html">
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-[42px] h-[42px]" />
+          <span class="text-[20px] font-bold text-[#0A0D12]">Shirt</span>
+        </div>
+      </a>
+
+      <!-- Search Container -->
+      <div class="flex items-center gap-3 w-[623px] h-[44px]">
+        <!-- Catalog Button -->
+        <button class="flex items-center gap-2 w-[108px] h-[44px] border border-neutral-300 rounded-xl px-4 text-sm text-[#0A0D12]">
+          <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+          Catalog
+        </button>
+
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-[491px] h-[44px] border border-neutral-300 rounded-xl px-4">
+          <img src="assets/icon-search.svg" alt="search" class="w-[15px] h-[15px]" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-6 w-[257px] justify-end">
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-[24px] h-[24px]">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-[24px] h-[24px]"/>
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              6
+            </span>
+          </div>
+        </a>
+
+        <!-- User -->
+        <button class="flex items-center gap-2 border border-neutral-300 rounded-xl px-4 h-[44px]">
+          <img src="assets/icon-user.svg" alt="user" class="w-[24px] h-[24px]" />
+          <span class="text-sm text-[#0A0D12]">John Doe</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== BODY CONTENT ===== -->
+  <main class="w-full max-w-[1200px] mx-auto pt-12 pb-12 px-4 lg:px-0">
+    <!-- Title -->
+    <h1 class="font-bold text-2xl lg:text-4xl mb-4">Catalog</h1>
+
+    <!-- Mobile: count + filter/sort row -->
+    <div class="lg:hidden space-y-3">
+      <p class="text-neutral-700 text-xs">Showing 160 products</p>
+      <div class="flex gap-2">
+        <!-- Open Filter Sheet -->
+        <button id="openFilter" class="flex-1 flex items-center justify-between rounded-xl border border-neutral-300 px-3 py-3">
+          <span class="text-sm">Filter</span>
+          <!-- filter icon -->
+          <img src="assets/icon-filter.svg" alt="filter" class="w-4 h-4">
+        </button>
+
+        <!-- Sort Latest -->
+        <div class="flex-1 flex items-center justify-between rounded-xl border border-neutral-300 px-3 py-3">
+          <select aria-label="Sort" class="w-full bg-transparent outline-none text-sm">
+            <option>Latest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Popular</option>
+          </select>
+          <!-- arrow -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop layout -->
+    <section class="mt-6 grid grid-cols-1 lg:grid-cols-[266px,1fr] gap-6">
+      <!-- Sidebar filter (desktop only) -->
+      <aside class="hidden lg:block">
+        <div class="rounded-xl border border-neutral-300 py-4 space-y-6">
+          <!-- FILTER + Categories -->
+          <div class="px-4 space-y-2">
+            <div class="font-bold text-base">FILTER</div>
+            <div class="font-semibold text-base">Categories</div>
+
+            <div class="space-y-2 pt-1">
+              <label class="flex items-center gap-2 text-base">
+                <input type="checkbox" class="h-4 w-4 rounded border-neutral-400" checked />
+                <span>All</span>
+              </label>
+              <label class="flex items-center gap-2 text-base">
+                <input type="checkbox" class="h-4 w-4 rounded border-neutral-400" />
+                <span>Shoes</span>
+              </label>
+              <label class="flex items-center gap-2 text-base">
+                <input type="checkbox" class="h-4 w-4 rounded border-neutral-400" />
+                <span>Clothes</span>
+              </label>
+              <label class="flex items-center gap-2 text-base">
+                <input type="checkbox" class="h-4 w-4 rounded border-neutral-400" />
+                <span>Accessories</span>
+              </label>
+            </div>
+          </div>
+
+          <hr class="border-neutral-300" />
+
+          <!-- Price -->
+          <div class="px-4 space-y-2">
+            <div class="font-semibold text-base">Price</div>
+
+            <div class="flex items-center gap-2 rounded-lg border border-neutral-300 p-1 overflow-hidden">
+              <div class="rounded bg-neutral-200 px-2 py-1 font-semibold">Rp</div>
+              <input placeholder="Minimum Price" class="flex-1 outline-none text-base placeholder-neutral-500" />
+            </div>
+
+            <div class="flex items-center gap-2 rounded-lg border border-neutral-300 p-1 overflow-hidden">
+              <div class="rounded bg-neutral-200 px-2 py-2 font-semibold">Rp</div>
+              <input placeholder="Maximum Price" class="flex-1 outline-none text-base placeholder-neutral-500" />
+            </div>
+          </div>
+
+          <hr class="border-neutral-300" />
+
+          <!-- Rating -->
+          <div class="px-4 space-y-3">
+            <div class="font-semibold text-base">Rating</div>
+            <div class="space-y-1">
+              <!-- 5 to 1 -->
+              <!-- Repeatable rating row -->
+              <template id="ratingRowTemplate">
+                <label class="flex items-center gap-2 p-2">
+                  <input type="checkbox" class="h-5 w-5 rounded border-neutral-400" />
+                  <div class="flex items-center gap-1">
+                    <span class="text-base rating-num"></span>
+                  </div>
+                </label>
+              </template>
+              <div id="ratingList" class="space-y-1">
+                <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="icon-star"><span class="text-base">5</span></div></label>
+                <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="icon-star"><span class="text-base">4</span></div></label>
+                <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="icon-star"><span class="text-base">3</span></div></label>
+                <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="icon-star"><span class="text-base">2</span></div></label>
+                <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="icon-star"><span class="text-base">1</span></div></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Product list area -->
+      <div class="space-y-6">
+        <!-- Desktop header -->
+        <div class="hidden lg:flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-base text-neutral-700">Showing 160 products</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-base">Sort</span>
+            <div class="flex items-center rounded-xl border border-neutral-300 px-3 py-2">
+              <select aria-label="Sort" class="bg-transparent outline-none text-base pr-6">
+                <option>Latest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Popular</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product grid -->
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <!-- 16 product cards -->
+          <!-- Card -->
+          <a href="/product-detail.html" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden">
+            <img src="assets/product-image1.png" alt="" class="w-full aspect-square object-cover">
+            <div class="p-3 space-y-1">
+              <h3 class="text-sm">Sneakers Court Minimalis</h3>
+              <div class="font-bold text-sm">Rp 275.000</div>
+              <div class="flex items-center gap-1">
+                <img src="/assets/icon-star.svg" alt="Star">
+                <span class="text-sm">4.9</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Duplicate the card 15 more times for demo -->
+          <!-- You can replace images/names/prices as needed -->
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image2.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Kaos Crewneck Esensial</h3><div class="font-bold text-sm">Rp800.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.8</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image3.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Tas Selempang Klasik</h3><div class="font-bold text-sm">Rp1.600.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.7</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image4.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Kaos Soft Touch</h3><div class="font-bold text-sm">Rp650.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.6</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image5.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Overshirt Utility</h3><div class="font-bold text-sm">Rp 375.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.5</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image6.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Sweater Rajut Cable</h3><div class="font-bold text-sm">Rp 1.300.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.8</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image7.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Syal Wol Kotak</h3><div class="font-bold text-sm">Rp 220.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.9</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image8.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Syal Wol Solid</h3><div class="font-bold text-sm">Rp 180.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.7</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image9.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Celana Panjang Tailored</h3><div class="font-bold text-sm">Rp 2.200.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.8</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image10.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Sneakers Harian</h3><div class="font-bold text-sm">Rp 1.900.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.9</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image11.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Jaket Puffer Quilted</h3><div class="font-bold text-sm">Rp 450.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.6</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image12.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Kemeja Oxford</h3><div class="font-bold text-sm">Rp 950.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.8</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image13.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Celana Pendek Chino</h3><div class="font-bold text-sm">Rp 120.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.5</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image14.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Topi Baseball 6-Panel</h3><div class="font-bold text-sm">Rp 320.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.7</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image15.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Kaos Katun Premium</h3><div class="font-bold text-sm">Rp 1.100.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.9</span></div></div></a>
+          <a href="#" class="rounded-xl bg-white shadow-[0_0_20px_0_rgba(203,202,202,0.25)] overflow-hidden"><img src="assets/product-image16.png" class="w-full aspect-square object-cover"><div class="p-3 space-y-1"><h3 class="text-sm">Hoodie Pullover Fleece</h3><div class="font-bold text-sm">Rp 275.000</div><div class="flex items-center gap-1"><img src="/assets/icon-star.svg" alt="Star"><span class="text-sm">4.8</span></div></div></a>
+        </div>
+
+        <!-- Load more -->
+        <div class="flex justify-center pt-2">
+          <button class="rounded-xl border border-neutral-300 px-6 py-3 font-semibold">Load More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Filter Sheet -->
+  <div id="filterSheet" class="fixed inset-0 z-50 hidden lg:hidden">
+    <!-- backdrop -->
+    <div class="absolute inset-0 bg-black/30" aria-hidden="true"></div>
+    <!-- sheet -->
+    <div class="absolute bottom-0 inset-x-0 rounded-t-2xl bg-white p-4 space-y-5 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between">
+        <div class="font-bold text-base">FILTER</div>
+        <button id="closeFilter" class="p-2 rounded-lg border border-neutral-300">Close</button>
+      </div>
+
+      <!-- Categories -->
+      <div class="space-y-2">
+        <div class="font-semibold">Categories</div>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2"><input type="checkbox" class="h-4 w-4 rounded border-neutral-400" checked /><span>All</span></label>
+          <label class="flex items-center gap-2"><input type="checkbox" class="h-4 w-4 rounded border-neutral-400" /><span>Shoes</span></label>
+          <label class="flex items-center gap-2"><input type="checkbox" class="h-4 w-4 rounded border-neutral-400" /><span>Clothes</span></label>
+          <label class="flex items-center gap-2"><input type="checkbox" class="h-4 w-4 rounded border-neutral-400" /><span>Accessories</span></label>
+        </div>
+      </div>
+
+      <hr class="border-neutral-300" />
+
+      <!-- Price -->
+      <div class="space-y-2">
+        <div class="font-semibold">Price</div>
+        <div class="flex items-center gap-2 rounded-lg border border-neutral-300 p-2">
+          <div class="rounded bg-neutral-200 px-2 py-1 font-semibold">Rp</div>
+          <input placeholder="Minimum Price" class="flex-1 outline-none placeholder-neutral-500" />
+        </div>
+        <div class="flex items-center gap-2 rounded-lg border border-neutral-300 p-2">
+          <div class="rounded bg-neutral-200 px-2 py-1 font-semibold">Rp</div>
+          <input placeholder="Maximum Price" class="flex-1 outline-none placeholder-neutral-500" />
+        </div>
+      </div>
+
+      <hr class="border-neutral-300" />
+
+      <!-- Rating -->
+      <div class="space-y-2">
+        <div class="font-semibold">Rating</div>
+        <div class="space-y-1">
+          <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><span>5</span></div></label>
+          <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><span>4</span></div></label>
+          <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><span>3</span></div></label>
+          <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><span>2</span></div></label>
+          <label class="flex items-center gap-2 p-2"><input type="checkbox" class="h-5 w-5 rounded border-neutral-400"/><div class="flex items-center gap-1"><span>1</span></div></label>
+        </div>
+      </div>
+
+      <div class="pt-1">
+        <button id="applyFilter" class="w-full rounded-xl bg-neutral-950 text-white py-3 font-semibold">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full border-t border-neutral-300 bg-white px-6 lg:px-36 py-20">
+    <div class="flex flex-col lg:flex-row justify-between gap-12">
+      
+      <!-- Contain Container -->
+      <div class="max-w-md flex flex-col gap-10">
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10" />
+          <span class="text-2xl font-bold">Shirt</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-neutral-600 text-base leading-relaxed">
+          Explore a realm of style with our fashion e-commerce platform, 
+          where shopping is effortless. Experience a smooth journey with 
+          an extensive selection of trendy apparel, all delivered directly 
+          to your home.
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex flex-col gap-4">
+          <span class="font-semibold">Follow on Social Media</span>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-fb.svg" alt="Facebook" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-ig.svg" alt="Instagram" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-tiktok.svg" alt="TikTok" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">E-Commerce</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">About Us</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Terms & Condition</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Privacy Policy</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Blog</a>
+      </div>
+
+      <!-- Help Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">Help</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Transact</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Payment Method</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Register</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

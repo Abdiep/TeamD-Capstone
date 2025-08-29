@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-white text-neutral-900 font-sfpro">
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 w-full bg-white shadow-[0px_0px_20px_0px_rgba(203,202,202,0.25)] flex flex-col md:flex-row items-center justify-between px-4 md:px-[120px] h-auto md:h-[84px] max-w-[393px] md:max-w-[1440px] mx-auto">
+    <!-- Mobile Layout -->
+    <div class="flex items-center justify-between w-full md:hidden py-2">
+      <!-- Logo (Left) -->
+      <a href="/index.html">
+        <img src="assets/logo.svg" alt="Logo" class="w-8 h-8" />
+      </a>
+
+      <button class="flex items-center gap-1.5 w-[40px] h-[34px] border border-neutral-300 rounded-xl px-3">
+        <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+      </button>
+
+      <!-- Search and Cart -->
+      <div class="flex items-center gap-2">
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-full max-w-[200px] h-[34px] border border-neutral-300 rounded-xl px-3">
+          <img src="assets/icon-search.svg" alt="search" class="w-4 h-4" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-6 h-6">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-6 h-6" />
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-4 h-4 flex items-center justify-center rounded-full">
+              1
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon (Right) -->
+      <button class="w-6 h-6">
+        <img src="assets/icon-hamburger.svg" alt="menu" class="w-6 h-6" />
+      </button>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex items-center justify-between w-full">
+      <!-- Logo -->
+      <a href="/index.html">
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.svg" alt="Logo" class="w-[42px] h-[42px]" />
+          <span class="text-[20px] font-bold text-[#0A0D12]">Shirt</span>
+        </div>
+      </a>
+
+      <!-- Search Container -->
+      <div class="flex items-center gap-3 w-[623px] h-[44px]">
+        <!-- Catalog Button -->
+        <a href="/catalog.html">
+          <button class="flex items-center gap-2 w-[108px] h-[44px] border border-neutral-300 rounded-xl px-4 text-sm text-[#0A0D12]">
+            <img src="assets/icon-menu.svg" alt="menu" class="w-[16px] h-[16px]" />
+            Catalog
+          </button>
+        </a>
+
+        <!-- Search Input -->
+        <div class="flex items-center gap-2 w-[491px] h-[44px] border border-neutral-300 rounded-xl px-4">
+          <img src="assets/icon-search.svg" alt="search" class="w-[15px] h-[15px]" />
+          <input type="text" placeholder="Search" class="w-full text-sm text-[#535862] placeholder-[#535862] focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-6 w-[257px] justify-end">
+        <!-- Cart with Notification -->
+        <a href="/cart.html">
+          <div class="relative w-[24px] h-[24px]">
+            <img src="assets/icon-cart.svg" alt="cart" class="w-[24px] h-[24px]"/>
+            <span class="absolute -top-1 -right-1 bg-[#EE1D52] text-white text-[10px] font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              6
+            </span>
+          </div>
+        </a>
+
+        <!-- User -->
+        <button class="flex items-center gap-2 border border-neutral-300 rounded-xl px-4 h-[44px]">
+          <img src="assets/icon-user.svg" alt="user" class="w-[24px] h-[24px]" />
+          <span class="text-sm text-[#0A0D12]">John Doe</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== BODY CONTENT ===== -->
+  <main class="w-full max-w-[1200px] mx-auto pt-12 pb-12 px-4 lg:px-0">
+    <!-- CART CONTAINER -->
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-[40px] w-full">
+      
+      <!-- CART ITEMS CONTAINER -->
+      <div class="flex flex-col gap-6 w-full lg:w-[808px]">
+        <h2 class="text-[32px] font-bold tracking-tight text-neutral-950">Cart</h2>
+
+        <!-- Select All -->
+        <div class="flex items-center gap-3 w-full h-[30px]">
+          <input type="checkbox" class="w-5 h-5 border border-neutral-400 rounded-sm" />
+          <span class="text-base font-medium text-neutral-950">Select All</span>
+        </div>
+
+        <!-- CART ITEM -->
+        <div class="flex justify-between items-center w-full h-[94px]">
+          <!-- Left: checkbox + product info -->
+          <div class="flex items-center gap-3 w-[640px]">
+            <input type="checkbox" checked class="w-5 h-5 accent-black rounded-sm" />
+            <div class="flex items-center gap-4 w-[608px]">
+              <!-- Product Image -->
+              <img src="assets/product-image1.png" alt="Sneakers" class="w-[80px] h-[80px] object-cover rounded-md" />
+              <!-- Text -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-neutral-950">Sneakers Court Minimalis</h3>
+                <span class="text-md text-neutral-600">Shoes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: price + actions -->
+          <div class="flex flex-col items-end justify-between h-[94px] w-[168px]">
+            <span class="text-xl font-bold text-neutral-950">Rp 275.000</span>
+            <div class="flex items-center gap-4">
+              <!-- Trash -->
+              <button class="w-6 h-6 flex items-center justify-center">
+                <img src="assets/icon-trash.svg" alt="delete" class="w-[18px] h-[20px]" />
+              </button>
+              <!-- Quantity -->
+              <div class="flex items-center gap-2 border border-neutral-300 rounded-xl px-3 py-2 h-[44px] w-[120px] justify-between">
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">-</button>
+                <span class="w-8 text-center text-lg font-bold text-neutral-950">2</span>
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garis pemisah -->
+        <div class="w-full border-t border-neutral-300"></div>
+
+        <div class="flex justify-between items-center w-full h-[94px]">
+          <!-- Left: checkbox + product info -->
+          <div class="flex items-center gap-3 w-[640px]">
+            <input type="checkbox" uncheck class="w-5 h-5 accent-black rounded-sm" />
+            <div class="flex items-center gap-4 w-[608px]">
+              <!-- Product Image -->
+              <img src="assets/product-image15.png" alt="Sneakers" class="w-[80px] h-[80px] object-cover rounded-md" />
+              <!-- Text -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-neutral-950">Kaos Katun Premium</h3>
+                <span class="text-md text-neutral-600">T-Shirt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: price + actions -->
+          <div class="flex flex-col items-end justify-between h-[94px] w-[168px]">
+            <span class="text-xl font-bold text-neutral-950">Rp 1.100.000</span>
+            <div class="flex items-center gap-4">
+              <!-- Trash -->
+              <button class="w-6 h-6 flex items-center justify-center">
+                <img src="assets/icon-trash.svg" alt="delete" class="w-[18px] h-[20px]" />
+              </button>
+              <!-- Quantity -->
+              <div class="flex items-center gap-2 border border-neutral-300 rounded-xl px-3 py-2 h-[44px] w-[120px] justify-between">
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">-</button>
+                <span class="w-8 text-center text-lg font-bold text-neutral-950">2</span>
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garis pemisah -->
+        <div class="w-full border-t border-neutral-300"></div>
+        
+        <div class="flex justify-between items-center w-full h-[94px]">
+          <!-- Left: checkbox + product info -->
+          <div class="flex items-center gap-3 w-[640px]">
+            <input type="checkbox" uncheck class="w-5 h-5 accent-black rounded-sm" />
+            <div class="flex items-center gap-4 w-[608px]">
+              <!-- Product Image -->
+              <img src="assets/product-image14.png" alt="Sneakers" class="w-[80px] h-[80px] object-cover rounded-md" />
+              <!-- Text -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-neutral-950">Topi Baseball 6-Panel</h3>
+                <span class="text-md text-neutral-600">Accecories</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: price + actions -->
+          <div class="flex flex-col items-end justify-between h-[94px] w-[168px]">
+            <span class="text-xl font-bold text-neutral-950">Rp 320.000</span>
+            <div class="flex items-center gap-4">
+              <!-- Trash -->
+              <button class="w-6 h-6 flex items-center justify-center">
+                <img src="assets/icon-trash.svg" alt="delete" class="w-[18px] h-[20px]" />
+              </button>
+              <!-- Quantity -->
+              <div class="flex items-center gap-2 border border-neutral-300 rounded-xl px-3 py-2 h-[44px] w-[120px] justify-between">
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">-</button>
+                <span class="w-8 text-center text-lg font-bold text-neutral-950">2</span>
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garis pemisah -->
+        <div class="w-full border-t border-neutral-300"></div>
+
+        <div class="flex justify-between items-center w-full h-[94px]">
+          <!-- Left: checkbox + product info -->
+          <div class="flex items-center gap-3 w-[640px]">
+            <input type="checkbox" uncheck class="w-5 h-5 accent-black rounded-sm" />
+            <div class="flex items-center gap-4 w-[608px]">
+              <!-- Product Image -->
+              <img src="assets/product-image9.png" alt="Sneakers" class="w-[80px] h-[80px] object-cover rounded-md" />
+              <!-- Text -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-neutral-950">Celana Panjang Tailored</h3>
+                <span class="text-md text-neutral-600">Trousers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: price + actions -->
+          <div class="flex flex-col items-end justify-between h-[94px] w-[168px]">
+            <span class="text-xl font-bold text-neutral-950">Rp 2.200.000</span>
+            <div class="flex items-center gap-4">
+              <!-- Trash -->
+              <button class="w-6 h-6 flex items-center justify-center">
+                <img src="assets/icon-trash.svg" alt="delete" class="w-[18px] h-[20px]" />
+              </button>
+              <!-- Quantity -->
+              <div class="flex items-center gap-2 border border-neutral-300 rounded-xl px-3 py-2 h-[44px] w-[120px] justify-between">
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">-</button>
+                <span class="w-8 text-center text-lg font-bold text-neutral-950">2</span>
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garis pemisah -->
+        <div class="w-full border-t border-neutral-300"></div>
+
+        <div class="flex justify-between items-center w-full h-[94px]">
+          <!-- Left: checkbox + product info -->
+          <div class="flex items-center gap-3 w-[640px]">
+            <input type="checkbox" uncheck class="w-5 h-5 accent-black rounded-sm" />
+            <div class="flex items-center gap-4 w-[608px]">
+              <!-- Product Image -->
+              <img src="assets/product-image16.png" alt="Sneakers" class="w-[80px] h-[80px] object-cover rounded-md" />
+              <!-- Text -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-neutral-950">Hoodie Pullover Fleece</h3>
+                <span class="text-md text-neutral-600">Jacket</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: price + actions -->
+          <div class="flex flex-col items-end justify-between h-[94px] w-[168px]">
+            <span class="text-xl font-bold text-neutral-950">Rp 275.000</span>
+            <div class="flex items-center gap-4">
+              <!-- Trash -->
+              <button class="w-6 h-6 flex items-center justify-center">
+                <img src="assets/icon-trash.svg" alt="delete" class="w-[18px] h-[20px]" />
+              </button>
+              <!-- Quantity -->
+              <div class="flex items-center gap-2 border border-neutral-300 rounded-xl px-3 py-2 h-[44px] w-[120px] justify-between">
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">-</button>
+                <span class="w-8 text-center text-lg font-bold text-neutral-950">2</span>
+                <button class="w-6 h-6 flex items-center justify-center text-neutral-950 font-bold text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- TOTAL SHOPPING CONTAINER -->
+      <div class="w-full lg:w-[352px] h-[202px] p-8 bg-white rounded-2xl shadow-[0px_0px_20px_rgba(203,202,202,0.25)] flex flex-col gap-6">
+        <h3 class="text-xl font-bold text-neutral-950">Total Shopping</h3>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-neutral-950">Total</span>
+          <span class="text-lg font-bold text-neutral-950">Rp 275.000</span>
+        </div>
+        <a href="/checkout.html">
+          <button class="w-full h-[48px] bg-neutral-950 text-white rounded-lg font-semibold text-md">Checkout</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full border-t border-neutral-300 bg-white px-6 lg:px-36 py-20">
+    <div class="flex flex-col lg:flex-row justify-between gap-12">
+      
+      <!-- Contain Container -->
+      <div class="max-w-md flex flex-col gap-10">
+        <!-- Logo + Text -->
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="Logo" class="w-10 h-10" />
+          <span class="text-2xl font-bold">Shirt</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-neutral-600 text-base leading-relaxed">
+          Explore a realm of style with our fashion e-commerce platform, 
+          where shopping is effortless. Experience a smooth journey with 
+          an extensive selection of trendy apparel, all delivered directly 
+          to your home.
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex flex-col gap-4">
+          <span class="font-semibold">Follow on Social Media</span>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-fb.svg" alt="Facebook" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-ig.svg" alt="Instagram" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border">
+              <img src="assets/icon-tiktok.svg" alt="TikTok" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-Commerce Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">E-Commerce</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">About Us</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Terms & Condition</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Privacy Policy</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Blog</a>
+      </div>
+
+      <!-- Help Menu -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-bold text-base">Help</h3>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Transact</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">Payment Method</a>
+        <a href="#" class="text-neutral-700 hover:text-neutral-900">How to Register</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
